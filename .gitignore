@@ -1,0 +1,21 @@
+# Build output is never tracked. tsdown names shared chunks by content hash, so
+# every build rewrote these files and the diff said nothing about the change.
+# Publishing is unaffected: `npm pack` runs prepack -> build, and the package's
+# `files` field picks `lib` up from the tarball.
+lib/
+
+node_modules/
+.pnpm-store/
+dist/
+coverage/
+*.log
+.env
+.DS_Store
+
+# Screenshots are release assets: `screenshots.json` lists them and the
+# marketplace card renders from them. These two rules are DEFENSIVE, not
+# load-bearing today: nothing above matches `docs/`, so as the repository stands
+# they change no outcome. They exist so a future broad rule (`*.png`,
+# `assets/`, a catch-all) cannot silently swallow the marketplace images.
+!docs/assets/
+!docs/assets/*.png

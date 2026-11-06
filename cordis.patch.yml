@@ -1,0 +1,5 @@
+# 注册「妙手」provider。插件复用妙手桌面端已有的 passport 登录态
+# （读 %USERPROFILE%\.meituan-catpaw\auth.json），不额外发起登录。
+- insert:
+    - id: dsh-connect-miaoshou
+      name: dsh-connect-miaoshou
