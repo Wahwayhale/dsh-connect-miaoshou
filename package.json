@@ -37,6 +37,7 @@
     "README.md"
   ],
   "scripts": {
+    "prepack": "npm run build",
     "build": "tsdown",
     "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.client.json",
     "check": "npm run typecheck && npm run build"

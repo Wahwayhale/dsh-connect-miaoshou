@@ -19,3 +19,6 @@ coverage/
 # `assets/`, a catch-all) cannot silently swallow the marketplace images.
 !docs/assets/
 !docs/assets/*.png
+
+# Local pack output (release asset is uploaded separately).
+*.tgz
