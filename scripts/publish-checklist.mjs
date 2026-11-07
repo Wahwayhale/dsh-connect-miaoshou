@@ -212,6 +212,14 @@ check('两份 README 的安装段都给出了可执行命令', () => {
   return '两份都给了安装命令'
 })
 
+check('两份 README 都嵌了卡片主图', () => {
+  for (const rel of ['README.md', 'README.en.md']) {
+    const text = readFileSync(join(ROOT, rel), 'utf8')
+    assert(/!\[.*\]\(docs\/assets\/.*\.png\)/.test(text), `${rel} 没有嵌入 docs/assets 下的图片`)
+  }
+  return '两份都嵌了'
+})
+
 // --- 6. submission -----------------------------------------------------------
 warnCheck('投稿 YAML 通过规则校验', () => {
   const script = join(ROOT, 'scripts', 'validate-submission.mjs')
