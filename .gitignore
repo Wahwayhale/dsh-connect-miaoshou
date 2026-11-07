@@ -22,3 +22,7 @@ coverage/
 
 # Local pack output (release asset is uploaded separately).
 *.tgz
+
+# Local pack / publish logs
+pub.log
+*.tgz
