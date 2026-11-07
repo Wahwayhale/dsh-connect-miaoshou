@@ -2,6 +2,18 @@
 
 本文件记录 dsh-connect-miaoshou 的版本变更。格式参照 Keep a Changelog，版本号遵循语义化版本。
 
+## [0.1.1] - 2026-11-07
+
+### 修复
+
+- README 的卡片主图改用绝对 URL。npm 页面是从 tarball 渲染 README 的，相对路径
+  `docs/assets/…` 在那一侧解析不到，会渲染成坏图；绝对 URL 在 GitHub 与 npm 两边都正常。
+
+### 变更
+
+- npm 包内补入两张设置页截图（`card` / `model-picker`）。0.1.0 的打包时点早于截图落盘，
+  包里只有图标。
+
 ## [0.1.0] - 2026-11-07
 
 首个公开版本。
