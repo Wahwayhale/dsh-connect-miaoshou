@@ -7,7 +7,7 @@
 走 `nocode.cn` 的 chat → agent-stream → SSE 三段链路，把远端 headless agent
 的逐字输出翻译成 OpenAI 兼容的流式响应；另附一块只读的积分/套餐/模型清单卡片。
 
-![设置页的妙手卡片：可用积分、账号状态、12 个模型清单](docs/assets/dsh-connect-miaoshou-card.png)
+![设置页的妙手卡片：可用积分、账号状态、12 个模型清单](https://raw.githubusercontent.com/Wahwayhale/dsh-connect-miaoshou/main/docs/assets/dsh-connect-miaoshou-card.png)
 
 ## 它提供什么
 

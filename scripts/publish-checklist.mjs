@@ -213,11 +213,17 @@ check('两份 README 的安装段都给出了可执行命令', () => {
 })
 
 check('两份 README 都嵌了卡片主图', () => {
+  // The image must be an ABSOLUTE url: npm renders the README from the tarball, and
+  // a relative `docs/assets/...` path resolves to nothing there. GitHub accepts both,
+  // so the absolute form is the only one that works on both surfaces.
   for (const rel of ['README.md', 'README.en.md']) {
     const text = readFileSync(join(ROOT, rel), 'utf8')
-    assert(/!\[.*\]\(docs\/assets\/.*\.png\)/.test(text), `${rel} 没有嵌入 docs/assets 下的图片`)
+    assert(
+      /!\[.*\]\(https:\/\/raw\.githubusercontent\.com\/[^)]*dsh-connect-miaoshou[^)]*\.png\)/.test(text),
+      `${rel} 没有嵌入绝对 URL 的主图（相对路径在 npm 页面上是坏图）`,
+    )
   }
-  return '两份都嵌了'
+  return '两份都嵌了绝对 URL'
 })
 
 // --- 6. submission -----------------------------------------------------------

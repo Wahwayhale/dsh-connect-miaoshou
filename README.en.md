@@ -9,7 +9,7 @@ walks the `nocode.cn` chat → agent-stream → SSE chain, and translates the re
 output into an OpenAI-compatible streaming response. A read-only card reports credits, plan and
 the model roster.
 
-![The 妙手 card in the settings page: credits, account status, the 12-model roster](docs/assets/dsh-connect-miaoshou-card.png)
+![The 妙手 card in the settings page: credits, account status, the 12-model roster](https://raw.githubusercontent.com/Wahwayhale/dsh-connect-miaoshou/main/docs/assets/dsh-connect-miaoshou-card.png)
 
 ## What it provides
 
